@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    position: relative;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0px auto;
+    padding-top: 50px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: -4px;
+    filter: grayscale(75%);
+    transition: 1s;
+}
+
+.one-third {
+    width: 29%;
+    float: left;
+    margin: 2%;
+}
+
+img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+ /* --------- Navigation --------*/
+
+
+.navigation {
+   height: 100%;
+   margin-top: 0;
+    
+}
+.topnav {
+    /* overflow: hidden; */
+    height: 44px;
+    width: 100%;
+    background-color: #333;
+    font-family: 'PT Serif', serif;
+    position: fixed;
+    z-index: 3;
+    /* !important; */
+    }
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 4;
+    }
+
+.topnav a:hover {
+    background-color: grey;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    }
+
+.active {
+    background-color: #DAA520;
+    color: white;
+    }
+
+.topnav .icon {
+    display: none;
+    }
+
+/* ------- Circle Menu --------- */
+
+.paw-menu {
+    /* background: red; */
+    height: calc(100vw/3);
+    width: calc(100vw/3);
+    left: calc(100vw/3); 
+    top: 10%;
+    position: absolute;
+    z-index: 2; 
+}
+
+
+.circle {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(0);
+    -moz-transform: scale(0) rotate(0);
+    -transform: scale(0) rotate(0);
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    z-index: 99;
+    text-align: center;   
+}
+
+.circle a {
+    text-decoration: none;
+    background: rgba(20,20,20,0.8);
+    color: #ccc;
+    font-size: 24px;
+    display: block;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    line-height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -transform: rotate(0deg);
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    z-index: 99;
+    cursor: pointer;
+    line-height: 140px;    
+}
+
+.circle a:hover {
+    color: #fff;
+}
+  
+.open.circle {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(45deg);
+    -moz-transform: scale(1) rotate(45deg);
+    -transform: scale(1) rotate(45deg);
+}
+
+.open.circle a {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -transform: rotate(-45deg);
+}
+
+.menu-button {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    text-decoration: none;
+    text-align: center;
+    color: orangered;
+    border-radius: 50%;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    padding: 10px;
+    background: #eee;
+    z-index: 99;
+}
+
+.menu-button:hover {
+    background-color: #eef;
+    color: lightgreen;
+}
+
+/* ------- Index Container --------- */
+/* .container.main:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+} */
+
+.homeContainer {
+    height: 100vh;
+    width: 100vw;
+    background: url(../../img/dog-animal-continental-bulldog-pet-451854.jpeg) top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.container {
+   position: absolute;
+   top: 45px;
+   width: 100%;
+ 
+}
+
+.explore{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    height: 50px;
+    width: 120px;
+    background: #333;
+    color: #DAA520;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.explore:hover{
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.5);
+    background: #DAA520;
+    color: #333;
+}
+
+/* ------- Footer --------- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+/* -------- Media Queries -------- */
+@media screen and (max-width: 768px) {
+    .one-third {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .one-third {
+        width: 98%;
+        margin: 1%;
+    }
+}
+
+
+/* ------- Dog Paw ------- */
+
+.dog {
+    position: absolute;
+    /* background:#FFF; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:inherit;
+    height:inherit;
+    -webkit-transform: scale(0) rotate(0deg);
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+    z-index: 0;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.open.dog{
+    opacity: 1;
+
+    
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
+
+.dog a {
+    color: #fff;
+    text-decoration: none;
+}
+    
+.pad {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* left:35px; top:100px;  */
+    content: "";background:#333;
+    width:300px; height:300px;
+    border-radius:200px/200px;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.base {
+    position:relative;
+    content: "";background:#000;
+    width:120px; height:120px;
+    text-align: center;
+    line-height: 120px;
+    border-radius:80px/80px;
+    overflow: hidden;
+    
+}
+.base-left{
+    left:-20px; top:200px; 
+    
+    
+}
+
+.base-right{
+    left:200px; top:80px; 
+    -webkit-box-shadow: 5px 5px 2px 3px #CCC;
+    box-shadow:         5px 5px 2px 3px #CCC;
+}
+/* .base-left-2{position:relative;
+left:10px; top:-170px; 
+content: "";background:#FFF;
+width:40px; height:40px;
+border-radius:40px/40px;
+} */
+/* .base-right-2{position:relative;
+left:290px; top:-310px; 
+content: "";background:#FFF;
+width:40px; height:40px;
+border-radius:40px/40px;
+} */
+
+.toe {
+    position:relative;
+        overflow: hidden;
+    
+background:#000;
+width:100px; height:150px;
+text-align: center;
+line-height: 150px;
+border-radius:70px/100px;
+-webkit-box-shadow: 1px 1px 3px 4px #ccc;
+box-shadow:         1px 1px 3px 4px #ccc;
+}
+.toe-1 {
+left:-80px; top:-330px; 
+    
+}
+.toe-2 {
+left:40px; top:-550px; 
+
+}
+.toe-3 {
+left:160px; top:-700px; 
+
+}
+.toe-4 {
+left:280px; top:-780px; 
+
+}
+
+/* -------- Form -------- */
+.formcontainer{
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 50px;
+   
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/*---------- Responsiveness ---------*/
+
+@media (max-width: 1500px){
+    .circular-menu {
+        top: 25%;
+    }
+}
+
+@media (max-width: 800px){
+    .circular-menu {
+        height: calc(100vw/2);
+        width: calc(100vw/2);
+        top: 25%;
+        left: 25%;
+    }
+
+    .pad{
+        width: 125px;
+        height: 125px;
+    }
+    .toe {
+        height: 75px;
+        width: 50px;
+        line-height: 75px;
+        
+    }
+
+    
+    .toe-1{
+        left:-50px; top:-160px; 
+        
+    }
+    .toe-2 {
+        left:5px; top:-270px; 
+        
+    }
+    .toe-3{
+        left:65px; top:-345px; 
+        
+    }
+    .toe-4{
+        left:120px; top:-380px; 
+        
+    }
+    .base {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+    }
+    .base-left {
+        
+        left:-20px; top:80px; 
+        
+    }
+    .base-right{
+        left:90px; top:30px; 
+        
+    }
+    .explore {
+        width: 75px;
+        height: 50px;
+    }
+}
